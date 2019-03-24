@@ -1,3 +1,9 @@
+googleHomeTimeReport
+====
+
+## Install
+
+You need to do the following:
 
 ```
 cd node_modules/google-home-notifier
