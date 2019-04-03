@@ -51,3 +51,18 @@ vim package.json
 
 npm update google-tts-api 
 ```
+
+#### error
+
+If you get error:
+
+```
+/home/username/app/node_modules/mdns/lib/dns_sd.js:35
+    throw ex;
+```
+
+exec
+
+```
+npm rebuild
+```
