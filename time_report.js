@@ -10,11 +10,15 @@ const message = 'It is ' + hours + ' ' + minutes;
 
 googlehome.ip(ipAddress, language);
 
-// googlehome.notify(message, function(notifyRes) {
-//     console.log(notifyRes);
-// });
+if(process.argv.length <= 2) {
+    googlehome.notify(message, function(notifyRes) {
+        console.log(notifyRes);
+    });
+} else {
+    // change voice audio source
+    googlehome.play("http://192.168.10.101:8118/" + process.argv[2], (res) => {
+        console.log(res);
+    });
 
-// change voice audio source
-googlehome.play("http://192.168.10.101:8118/0.mp3", (res) => {
-    console.log(res);
-});
+}
+
